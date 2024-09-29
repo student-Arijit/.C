@@ -7,16 +7,31 @@ struct STUDENT {
     char name[10];
 };
 
+void Get_Data(struct STUDENT*);
+void Print_Data(struct STUDENT*);
+
 int main(void) {
-    struct STUDENT std;
+    struct STUDENT std[10];
 
-    printf("Enter your name:");
-    scanf("%s", std.name);
-    printf("Enter your roll");
-    scanf("%d", &std.roll);
+    Get_Data(std);
 
-    printf("your name = %s", std.name);
-    printf("your roll = %d", std.roll);
+    Print_Data(std);
 
     return 0;
+}
+
+void Get_Data(struct STUDENT Data[]) {
+    for (size_t i = 0; i < 1; i++) {
+        printf("Enter your name:");
+        scanf("%s", Data[i].name);
+        printf("Enter your roll");
+        scanf("%d", &Data[i].roll);
+    }
+}
+
+void Print_Data(struct STUDENT Data[]) {
+    for (size_t i = 0; i < 1; i++) {
+        printf("your name: %s", Data[i].name);
+        printf("your roll %d", Data[i].roll);
+    }
 }
