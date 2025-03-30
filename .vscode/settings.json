@@ -59,5 +59,8 @@
     "code-runner.saveFileBeforeRun": true,
     "code-runner.clearPreviousOutput": true,
     "files.autoSave": "afterDelay",
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": false,
+    "files.associations": {
+        "array": "c"
+    }
 }
